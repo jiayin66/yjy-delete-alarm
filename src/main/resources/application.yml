@@ -1,0 +1,108 @@
+multipart: 
+  maxFileSize: 100Mb
+  maxRequestSize: 100Mb
+jp:
+  swagger:
+    basePackage: com.yjy.controller
+    apiInfo:
+      title: demo
+      description: demo
+      version: 1.0.0
+      email: 2864245248@qq.com
+server:
+  port: 8091
+#【5】利川正式环境
+
+#  servlet:
+#    multipart:
+#      max-file-size: -1
+#      max-request-size: -1
+spring:    
+  alarm:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@59.206.17.83:1521/ORCL
+    username: HCZZppolsituinfo
+    password: password
+  ins:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@59.206.17.83:1521/ORCL
+    username: HCZZInstruction1
+    password: password
+  user:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@//71.30.34.7:1521/kxc_hczz_users
+    username: kxc_hczz_userpriv
+    password: ABC_ps123
+  
+
+#【4】南宁正式环境 
+#spring:
+#  alarm:
+#    driver-class-name: oracle.jdbc.driver.OracleDriver
+#    url: jdbc:oracle:thin:@59.206.17.83:1521/ORCL
+#    username: HCZZppolsituinfo
+#    password: password
+#  ins:
+#    driver-class-name: oracle.jdbc.driver.OracleDriver
+#    url: jdbc:oracle:thin:@59.206.17.83:1521/ORCL
+#    username: HCZZInstruction1
+#    password: password
+#  user:
+#    driver-class-name: oracle.jdbc.driver.OracleDriver
+#    url: jdbc:oracle:thin:@//71.30.34.7:1521/kxc_hczz_users
+#    username: kxc_hczz_userpriv
+#    password: ABC_ps123
+
+
+#【3】南宁测试环境 
+#spring:
+#  alarm:
+#    driver-class-name: oracle.jdbc.driver.OracleDriver
+#    url: jdbc:oracle:thin:@59.206.17.83:1521/ORCL
+#    username: HCZZppolsituinfo
+#    password: password
+#  ins:
+#    driver-class-name: oracle.jdbc.driver.OracleDriver
+#    url: jdbc:oracle:thin:@59.206.17.83:1521/ORCL
+#    username: HCZZInstruction1
+#    password: password
+#  user:
+#    driver-class-name: oracle.jdbc.driver.OracleDriver
+#    url: jdbc:oracle:thin:@//71.30.29.60:1521/orcl
+#    username: kxc_hczz_userpriv
+#    password: ABC_ps123
+
+
+#[2]荆门正式环境
+#spring:
+#  alarm:
+#    driver-class-name: oracle.jdbc.driver.OracleDriver
+#    url: jdbc:oracle:thin:@10.75.169.189:1521/ORCL
+#    username: HCZZppolsituinfo
+#    password: password
+#  ins:
+#    driver-class-name: oracle.jdbc.driver.OracleDriver
+#    url: jdbc:oracle:thin:@10.75.169.189:1521/ORCL
+#    username: HCZZInstruction1
+#    password: password
+
+#[1]南宁开发环境
+#spring:
+#  alarm:
+#    driver-class-name: oracle.jdbc.driver.OracleDriver
+#    url: jdbc:oracle:thin:@172.16.14.185:1521:ORCL
+#    username: HCZZppolsituinfo
+#    password: password
+#  ins:
+#    driver-class-name: oracle.jdbc.driver.OracleDriver
+#    url: jdbc:oracle:thin:@172.16.14.185:1521:ORCL
+#    username: HCZZInstruction1
+#    password: password
+#  user:
+#    driver-class-name: oracle.jdbc.driver.OracleDriver
+#    url: jdbc:oracle:thin:@172.16.14.185:1521:ORCL
+#    username: HCZZUserPriv
+#    password: password
+logging:
+  level:
+    com.yjy: debug
