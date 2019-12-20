@@ -88,6 +88,14 @@
 			<artifactId>fastjson</artifactId>
 			<version>1.2.47</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>com.jp.projtool</groupId>
+			<artifactId>projtool</artifactId>
+			<version>2.0</version>
+			<classifier>public</classifier>
+		</dependency>
+		
   </dependencies>
 
 	<build>

@@ -11,6 +11,11 @@ import org.springframework.context.annotation.Primary;
 
 @Configuration
 public class DataSourceConfig {
+	 @Bean(name = "resource")
+	    @ConfigurationProperties(prefix = "spring.resource") // bootstrap.yml中对应属性的前缀
+	    public DruidDataSource dataSource4() {
+	    	return DruidDataSourceBuilder.create().build();
+	    }
 
     @Bean(name = "alarm")
     @Primary
@@ -31,5 +36,7 @@ public class DataSourceConfig {
     public DruidDataSource dataSource3() {
     	return DruidDataSourceBuilder.create().build();
     }
+    
+   
 
 }

@@ -36,9 +36,28 @@ public class AlarmController {
 	@GetMapping("1/delete/find")
 	@ApiOperation("(1)查找到警情摘要中带xx关键字的警情（eg:测试）")
 	public List<TestAlarmModel> findTestAlarm(@RequestParam("keyword") String keyword) {
-		return alarmMapper.findTestAlarm(keyword);
+		List<TestAlarmModel> result=alarmMapper.findTestAlarm(keyword);
+		logParam(result);
+		return result;
 	}
 	
+	private void logParam(List<TestAlarmModel> result) {
+		StringBuffer sb=new StringBuffer();
+		sb.append("[");
+		int index=1;
+		for(TestAlarmModel testAlarmModel:result) {
+			sb.append("\"");
+			sb.append(testAlarmModel.getSn());
+			sb.append("\"");
+			if(index!=result.size()) {
+				sb.append(",");
+			}
+			index++;
+		}
+		sb.append("]");
+		log.info("待删除的警情如入参为："+sb.toString());
+	}
+
 	@PostMapping("2/delete")
 	@ApiOperation("(2)根据流水号集合，删除警情")
 	public String delete(@RequestBody List<String> snList) {
@@ -90,6 +109,5 @@ public class AlarmController {
 		log.info("总共查询：{}个数据，其中：{}个数据我们库没有，没有的全部sn为：{}",snList.size(),idList.size(),idList);
 		return "请求完毕";
 	}
-	
 	
 }
